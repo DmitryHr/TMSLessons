@@ -9,7 +9,7 @@ import homework.lesson4.mainTask.DiagonalPrinter;
 
 public class MainRunner {
     public static void main(String[] args) {
-
+        //test
         /*
         Основное задание. Задание 0
          */
