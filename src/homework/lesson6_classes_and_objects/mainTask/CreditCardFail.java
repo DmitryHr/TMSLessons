@@ -1,4 +1,4 @@
-package homework.lesson6.mainTask;
+package homework.lesson6_classes_and_objects.mainTask;
 
 public class CreditCardFail {
     int [] numberCard = new int[3];

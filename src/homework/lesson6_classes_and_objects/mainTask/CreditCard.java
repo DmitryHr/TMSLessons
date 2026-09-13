@@ -1,4 +1,4 @@
-package homework.lesson6.mainTask;
+package homework.lesson6_classes_and_objects.mainTask;
 
 public class CreditCard {
     private int numberCart;

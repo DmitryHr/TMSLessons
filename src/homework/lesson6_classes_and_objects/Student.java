@@ -1,7 +1,5 @@
-package homework.lesson6;
+package homework.lesson6_classes_and_objects;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Student {
