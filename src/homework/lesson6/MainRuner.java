@@ -8,25 +8,17 @@ public class MainRuner {
     static void main() {
 
         Scanner scanner = new Scanner(System.in);
-        CreditCard creditCard1 = new CreditCard();
-        CreditCard creditCard2 = new CreditCard();
-        CreditCard creditCard3 = new CreditCard();
-        creditCard1.setNumberCart(1);
-        creditCard1.setMoney(200);
+        CreditCard creditCard1 = new CreditCard(1, 100);
+        CreditCard creditCard2 = new CreditCard(2, 200);
+        CreditCard creditCard3 = new CreditCard(3, 300);
 
-        creditCard2.setNumberCart(2);
-        creditCard2.setMoney(400);
-
-        creditCard3.setNumberCart(3);
-        creditCard3.setMoney(700);
-        //пополнение карт деньгами
-        creditCard1.setMoney(scanner.nextDouble());
-        creditCard1.methodPutMoney(creditCard1.getNumberCart(), creditCard1.getMoney());
-        creditCard2.methodPutMoney(creditCard2.getNumberCart(), creditCard2.getMoney());
-        creditCard3.methodGetMoney(creditCard3.getNumberCart(), creditCard3.getMoney());
+        creditCard1.methodPutMoney(200);
+        creditCard2.methodPutMoney(50);
+        creditCard3.methodGetMoney(500);
         creditCard1.informationCard();
         creditCard2.informationCard();
         creditCard3.informationCard();
+
 
 
 //       creditCard.toppicUpCards();

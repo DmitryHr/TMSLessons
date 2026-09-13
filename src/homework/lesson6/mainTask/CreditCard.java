@@ -4,33 +4,24 @@ public class CreditCard {
     private int numberCart;
     private double money;
 
-    public int getNumberCart() {
-        return numberCart;
+    public CreditCard(int creditCard, double moneyOnCard){
+        this.numberCart = creditCard;
+        this.money = moneyOnCard;
     }
 
-    public double getMoney() {
-        return money;
+    public void methodPutMoney(double money){
+       this.money += money;
     }
 
-    public void setNumberCart(int numberCart) {
-        this.numberCart = numberCart;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
-    public void methodPutMoney(int numberCart, double money){
-       this.numberCart = numberCart;
-        this.money += money;
-    }
-
-    public void methodGetMoney(int numberCart, double money){
-        this.numberCart = numberCart;
-        this.money -= money;
+    public void methodGetMoney(double money){
+        if(this.money >= money){
+        this.money -= money;}
+        else {
+            System.out.println("На карте " +numberCart+ " недостаточно средств");
+        }
     }
 
     public void informationCard(){
-        System.out.println("Баланс карты " + getNumberCart() + " состовляет " + getMoney() + "$");
+        System.out.println("Баланс карты " + numberCart + " состовляет " + money + " $");
     }
 }
