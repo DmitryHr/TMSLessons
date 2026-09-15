@@ -6,12 +6,13 @@ public class Computer {
     Ram ram;
     HddDisk hdd;
 
-    public Computer(double price, String model){
+    public Computer(double price, String model) {
         this.price = price;
         this.model = model;
         this.ram = new Ram("Samsung Electronics", 32);
         this.hdd = new HddDisk("Kingston", 2000, "Внутренний");
     }
+
     public Computer(double price, String model, HddDisk hdd, Ram ram) {
         this.price = price;
         this.model = model;
@@ -19,7 +20,7 @@ public class Computer {
         this.hdd = hdd;
     }
 
-    public void information(){
+    public void information() {
         System.out.println("Цена компьютера " + price);
         System.out.println("Модель компьютера " + model);
 //        System.out.print("Жесткий диск ");
