@@ -4,11 +4,13 @@ public class Figure {
 
     private double sideA;
     private double sideB;
-    private double sideC;
+    private double summ;
 
-    public double getSideA() {
-        return sideA;
+    public Figure(double sideA, double sideB){
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
+    public double getSideA() {return sideA;}
 
     public void setSideA(double sideA) {
         this.sideA = sideA;
@@ -22,14 +24,6 @@ public class Figure {
         this.sideB = sideB;
     }
 
-    public double getSideC() {
-        return sideC;
-    }
-
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
-    }
-
     public double getSumm() {
         return summ;
     }
@@ -38,31 +32,10 @@ public class Figure {
         this.summ = summ;
     }
 
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public double getPerimetr() {
-        return perimetr;
-    }
-
-    public void setPerimetr(double perimetr) {
-        this.perimetr = perimetr;
-    }
-
-    private double summ;
-
-    double area;
-    double perimetr;
-
     public double area(){
-        return area;
+        return getSumm();
     };
     public double perimetr(){
-        return perimetr;
+        return getSumm();
     };
 }

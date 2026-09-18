@@ -4,6 +4,7 @@ public class Circle extends Rectangle{
 
     double radius;
     public  Circle(double radius){
+        //Здесь наследуется родительский конструктор.
         super(0, 0);
         this.radius = radius;
     }

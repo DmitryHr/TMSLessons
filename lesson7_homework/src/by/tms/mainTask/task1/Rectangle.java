@@ -3,9 +3,7 @@ package by.tms.mainTask.task1;
 public class Rectangle extends Treangle{
 
     public  Rectangle(double sideA, double sideB){
-        super(0, 0, 0);
-        setSideA(sideA);
-        setSideB(sideB);
+        super(sideA, sideB, 0);
     }
 
     public double area(){
