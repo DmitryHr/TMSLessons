@@ -1,6 +1,8 @@
-import by.tms.mainTask.task2.Accountant;
-import by.tms.mainTask.task2.Director;
-import by.tms.mainTask.task2.Worker;
+import by.tms.additionTask.registr.Registr;
+import by.tms.additionTask.model.GoodsSupplyContract;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class AppalicatoinHomeworkSeven {
     public static void main(String[] args) {
@@ -24,13 +26,24 @@ public class AppalicatoinHomeworkSeven {
 //
 //        System.out.println("Общая сумма периметра для всех фигур равна " + totflPerimetr);
 
-        Director director = new Director();
-        Worker worker = new Worker();
-        Accountant accountant = new Accountant();
+//        Director director = new Director();
+//        Worker worker = new Worker();
+//        Accountant accountant = new Accountant();
+//
+//        director.printPosition();
+//        worker.printPosition();
+//        accountant.printPosition();
 
-        director.printPosition();
-        worker.printPosition();
-        accountant.printPosition();
+        Date docDate1 = createDate(2024, Calendar.JANUARY, 15);
 
+        GoodsSupplyContract supplyContract = new GoodsSupplyContract("test26", "мыло", 20,docDate1);
+        supplyContract.printInfo();
+
+    }
+    private static Date createDate(int year, int month, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day, 0, 0, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTime();
     }
 }
