@@ -1,11 +1,16 @@
+import by.tms.additionTask.model.EmploymentContract;
+import by.tms.additionTask.model.FinancialInvoice;
 import by.tms.additionTask.registr.Registr;
 import by.tms.additionTask.model.GoodsSupplyContract;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.SimpleFormatter;
 
 public class AppalicatoinHomeworkSeven {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
 //        Figure[] figure = new Figure[5];
 //        figure[0] = new Treangle(20, 40, 10);
@@ -34,16 +39,27 @@ public class AppalicatoinHomeworkSeven {
 //        worker.printPosition();
 //        accountant.printPosition();
 
-        Date docDate1 = createDate(2024, Calendar.JANUARY, 15);
 
-        GoodsSupplyContract supplyContract = new GoodsSupplyContract("test26", "мыло", 20,docDate1);
-        supplyContract.printInfo();
+        Registr registr = new Registr();
+        Date docDate = new Date();
+
+        GoodsSupplyContract supplyContract = new GoodsSupplyContract("SUP-01", "Электроника", 500, docDate);
+        registr.saveDocument(supplyContract);
+        registr.printInfoDoc(supplyContract);
+
+        EmploymentContract employmentContract = new EmploymentContract("EMP-01", docDate, docDate, "NTCN");
+        registr.saveDocument(employmentContract);
+        registr.printInfoDoc(employmentContract);
+
+        FinancialInvoice financialInvoice = new FinancialInvoice("FIN-01", docDate, 200.0, "Тест");
+        registr.saveDocument(financialInvoice);
+        registr.printInfoDoc(financialInvoice);
+
+        System.out.println(registr.getIndex());
+
+//        GoodsSupplyContract supplyContract = new GoodsSupplyContract("test26", "мыло", 20, docDate1);
+//        supplyContract.printInfo();
 
     }
-    private static Date createDate(int year, int month, int day) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day, 0, 0, 0);
-        calendar.set(Calendar.MILLISECOND, 0);
-        return calendar.getTime();
-    }
+
 }

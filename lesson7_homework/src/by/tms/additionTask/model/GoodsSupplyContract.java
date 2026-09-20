@@ -42,7 +42,7 @@ public class GoodsSupplyContract extends Document{
         System.out.println("Номер документа: " + getNumberDocuments());
         System.out.println("Тип товара: " + getProductType());
         System.out.println("Кличество товара: " + getQuantiliOfGoods());
-        System.out.println("Дата документа: " + getDateDocument());
+        System.out.println("Дата документа: " + getDateDocument()) ;
         System.out.println("========================================================");
     }
 }

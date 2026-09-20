@@ -37,6 +37,7 @@ public abstract class Document {
 
     public abstract void printInfo();
 
+
     @Override
     public String toString(){
         return "Document{"+
