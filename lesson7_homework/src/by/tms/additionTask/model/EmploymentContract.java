@@ -35,7 +35,7 @@ public class EmploymentContract extends Document{
     public void printInfo() {
         System.out.println("===========Контракт на поставку товалов===============");
         System.out.println("Номер документа: " + getNumberDocuments());
-        System.out.println("Дата документа: " + getDateDocument()) ;
+        System.out.println("Дата документа: " + getDateDocument());
         System.out.println("Дата офончания договора: " + getDateEndContract());
         System.out.println("ФИО сотрудника: " + getNameEmployer());
         System.out.println("========================================================");

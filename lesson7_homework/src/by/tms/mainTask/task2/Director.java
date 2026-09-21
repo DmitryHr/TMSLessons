@@ -1,8 +1,8 @@
 package by.tms.mainTask.task2;
 
-public class Director implements Printable{
+public class Director implements Printable {
     @Override
-    public void  printPosition(){
+    public void printPosition() {
         System.out.println("Должность сотрудника - Директор");
     }
 }

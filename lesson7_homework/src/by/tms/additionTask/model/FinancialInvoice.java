@@ -22,18 +22,22 @@ public class FinancialInvoice extends Document {
         this.departmentCode = departmentCode;
     }
 
-    public FinancialInvoice(){};
-    public FinancialInvoice(String numberDocuments, Date dateDocument, double monthlyTotal, String departmentCode){
+    public FinancialInvoice() {
+    }
+
+    ;
+
+    public FinancialInvoice(String numberDocuments, Date dateDocument, double monthlyTotal, String departmentCode) {
         super(numberDocuments, dateDocument);
-        this.monthlyTotal  = monthlyTotal;
+        this.monthlyTotal = monthlyTotal;
         this.departmentCode = departmentCode;
     }
 
     @Override
-    public void printInfo(){
+    public void printInfo() {
         System.out.println("===========Финансовая накладная===============");
         System.out.println("Номер документа: " + getNumberDocuments());
-        System.out.println("Дата документа: " + getDateDocument()) ;
+        System.out.println("Дата документа: " + getDateDocument());
         System.out.println("Итоговая сумма за месяц: " + getMonthlyTotal());
         System.out.println("Код департамента: " + getDepartmentCode());
         System.out.println("========================================================");

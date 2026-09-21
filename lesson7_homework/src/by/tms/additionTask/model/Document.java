@@ -39,9 +39,9 @@ public abstract class Document {
 
 
     @Override
-    public String toString(){
-        return "Document{"+
-                "numberDocuments"+ numberDocuments +
+    public String toString() {
+        return "Document{" +
+                "numberDocuments" + numberDocuments +
                 "dateDocument" + dateDocument;
     }
 }
