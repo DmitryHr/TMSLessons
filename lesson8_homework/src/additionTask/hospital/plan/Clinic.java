@@ -20,21 +20,11 @@ public class Clinic {
 
     public void doctorIsOrder() {
         switch (treatmentPlan.getCodeTreatment()){
-            case 1 -> {
-                surgeon = new Surgeon();
-                patient.printFio();
-                surgeon.toTreat();
-            }
-            case 2 -> {
-                dentist = new Dentist();
-                patient.printFio();
-                dentist.toTreat();
-            }
-            default -> {
-                physician = new Physician();
-                patient.printFio();
-                physician.toTreat();
-            }
+            case 1 -> surgeon = new Surgeon();
+            case 2 -> dentist = new Dentist();
+            default -> physician = new Physician();
         }
+        patient.printFio();
+        surgeon.toTreat();
     }
 }
