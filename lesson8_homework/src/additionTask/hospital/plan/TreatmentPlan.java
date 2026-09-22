@@ -8,4 +8,11 @@ public class TreatmentPlan {
         this.codeTreatment = codeTreatment;
     }
 
+    public int getCodeTreatment() {
+        return codeTreatment;
+    }
+
+    public void setCodeTreatment(int codeTreatment) {
+        this.codeTreatment = codeTreatment;
+    }
 }
