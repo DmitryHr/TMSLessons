@@ -7,9 +7,9 @@ public class ProcessingOfTheDocumentNumber {
     public static String nameDoc = "";
 
 
-    public void realizationMethod(String text){
+    public void realizationMethod(String text) {
         boolean validName = Pattern.matches(PATERN_MASK, text);
-        if (validName){
+        if (validName) {
             MethodForProcessingOfTheDocumentNumber.oneString(text);
             MethodForProcessingOfTheDocumentNumber.starString(text);
             MethodForProcessingOfTheDocumentNumber.delNumbers(text);
@@ -18,8 +18,7 @@ public class ProcessingOfTheDocumentNumber {
             MethodForProcessingOfTheDocumentNumber.checkStartWith(text);
             MethodForProcessingOfTheDocumentNumber.checkEndWith(text);
 
-        }
-        else{
+        } else {
             System.out.println("Error");
         }
     }

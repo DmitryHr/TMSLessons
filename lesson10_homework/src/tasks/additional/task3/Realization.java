@@ -15,12 +15,12 @@ public class Realization {
 
     public String findWordWithMinUniqueChars(String input) {
         String newWords = input.replaceAll("[,.!]", "");
-        String  [] arrayStr = newWords.trim().split("\\s");
+        String[] arrayStr = newWords.trim().split("\\s");
 
         String result = null;
         int minUnique = Integer.MAX_VALUE;
 
-        for (String word: arrayStr) {
+        for (String word : arrayStr) {
             int uniqueCount = countUniqueChars(word);
             if (uniqueCount < minUnique) {
                 minUnique = uniqueCount;
