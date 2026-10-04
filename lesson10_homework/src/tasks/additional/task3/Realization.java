@@ -14,13 +14,17 @@ public class Realization {
     }
 
     public String findWordWithMinUniqueChars(String input) {
+        //удаляем все знаки в квадратных скобках
         String newWords = input.replaceAll("[,.!]", "");
+        //Разбиваем строку на массив слов по пробелу или табуляции
         String[] arrayStr = newWords.trim().split("\\s");
 
         String result = null;
-        int minUnique = Integer.MAX_VALUE;
+        //задаем минимальное значение по первому слову из масива
+        int minUnique = arrayStr[0].length();
 
         for (String word : arrayStr) {
+
             int uniqueCount = countUniqueChars(word);
             if (uniqueCount < minUnique) {
                 minUnique = uniqueCount;
