@@ -1,16 +1,17 @@
+import tasks.main.task1.DocumentNumberReaderAndDeduplicator;
 import tasks.main.task1.FilePathToReading;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class RuunerSetList {
     static void main() {
         FilePathToReading filePathToReading = new FilePathToReading();
-        HashSet <String> result = filePathToReading.inputPathToFile();
+        ArrayList<String> arrayList;
 
-        System.out.println(result);
-
-
+        DocumentNumberReaderAndDeduplicator documentNumberReader = new DocumentNumberReaderAndDeduplicator();
+        arrayList = filePathToReading.inputPathToFile();
+        documentNumberReader.readerAndDeduplicatior(arrayList);
+        documentNumberReader.validationDocument();
+        documentNumberReader.fileReport();
     }
 }
